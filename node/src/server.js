@@ -20,15 +20,33 @@ app.get(
   )
 );
 app.get(
+  "/api/manifest/profile/:filename",
+  forwardFastapi(
+    (req) => `/api/manifest/profile/${encodeURIComponent(req.params.filename)}`
+  )
+);
+app.get(
   "/api/suite/:filename",
   forwardFastapi(
     (req) => `/api/suite/${encodeURIComponent(req.params.filename)}`
   )
 );
 app.get(
+  "/api/suite/profile/:filename",
+  forwardFastapi(
+    (req) => `/api/suite/profile/${encodeURIComponent(req.params.filename)}`
+  )
+);
+app.get(
   "/api/tag/:tag",
   forwardFastapi(
     (req) => `/api/tag/${encodeURIComponent(req.params.tag)}`
+  )
+);
+app.get(
+  "/api/tag/profile/:filename",
+  forwardFastapi(
+    (req) => `/api/tag/profile/${encodeURIComponent(req.params.filename)}`
   )
 );
 /*

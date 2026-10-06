@@ -16,6 +16,15 @@ async def list_manifest(
     clean_result = list(filter(None, results.split("\n\n")))
     return {"result": clean_result }
         
+@router.get("/profile/{filename}")
+async def run_profile_test_manifest(
+    filename:str,
+    x_internal_key: str | None = Header(default=None),
+):
+    verify_internal_key(x_internal_key)
+    command = ["compliance", "manifest", "run", filename, "--profile", "--format", "json"]
+    return await run_test(command)
+        
 @router.get("/{filename}")
 async def run_test_manifest(
     filename:str,

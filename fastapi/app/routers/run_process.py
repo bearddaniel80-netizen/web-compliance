@@ -52,6 +52,8 @@ async def run_test(command):
         response = json.load(f)
         _collect_column_name(response, "summary")
         _collect_column_list_name(response, "results")
+        if "query_performance" in response.keys() and len(response["query_performance"]) > 0:
+            _collect_column_list_name(response, "query_performance")
         if "failures" in response.keys() and len(response["failures"]) > 0:
             _collect_column_list_name(response, "failures")
         return response

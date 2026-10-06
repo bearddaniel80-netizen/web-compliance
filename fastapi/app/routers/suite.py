@@ -15,6 +15,15 @@ async def list_suite(
     results = await run_query(command)
     clean_result = list(filter(None, results.split("\n")))
     return {"result": clean_result }
+
+@router.get("/profile/{filename}")
+async def run_profile_test_suite(
+    filename:str,
+    x_internal_key: str | None = Header(default=None),
+):
+    verify_internal_key(x_internal_key)
+    command = ["compliance", "suite", "run", filename, "--profile", "--format", "json"]
+    return await run_test(command)
         
 @router.get("/{filename}")
 async def run_test_suite(

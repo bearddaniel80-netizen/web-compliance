@@ -1,29 +1,7 @@
-# web-compliance
+# web-template
 
 ## Description
-A secured api/frontend for the AQL platform. This runs a `subprocess` on the fastapi service. There are 2 endpoints per 3 routes so in total 6 endpoints. These endpoint can also be reached with `curl -ikL localhost`.
-
----
-
-## Endpoints
-
-### /api/manifest/list
-Displays all possible test files.
-
-### /api/manifest/{filename}
-Runs all tests in the test file.
-
-### /api/suite/list
-Displays all possible suite files.
-
-### /api/suite/{filename}
-Runs all tests in the test files.
-
-### /api/tag/list
-Displays all possible test tags.
-
-### /api/tag/{tag}
-Runs all tests across test files with test tag.
+A secured api/frontend for the AQL platform. 
 
 ---
 
@@ -130,6 +108,3 @@ Node
   ↓
 FastAPI
 ```
-
-## Reference
-This is a web implementation of a [CLI tool](https://github.com/bearddaniel80-netizen/compliance-public.git).

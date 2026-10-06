@@ -28,6 +28,37 @@ test.describe("Express API routes", () => {
     expect(response.status()).toBe(200);
   });
 
+  test("GET /api/manifest/profile/:filename", async ({ request }) => {
+    const filename = "csv";
+
+    const response = await request.get(
+      `${BASE_URL}/api/manifest/profile/${filename}`
+    );
+
+    expect(response.status()).toBe(200);
+  });
+
+  test("GET /api/suite/profile/:filename", async ({ request }) => {
+    const filename = "core";
+
+    const response = await request.get(
+      `${BASE_URL}/api/suite/profile/${filename}`
+    );
+
+    expect(response.status()).toBe(200);
+  });
+
+  test("GET /api/tag/profile/:tag", async ({ request }) => {
+    const tag = "csv";
+
+    const response = await request.get(
+      `${BASE_URL}/api/tag/profile/${tag}`
+    );
+
+    expect(response.status()).toBe(200);
+
+  });
+
   test("GET /api/manifest/:filename", async ({ request }) => {
     const filename = "csv";
 

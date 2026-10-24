@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import CarouselMenu from "./components/menu/Carousel";
+import TestDashboard from "./components/container/TestPage";
 
 ReactDOM.createRoot(
   document.getElementById("root")
 ).render(
   <React.StrictMode>
-      <CarouselMenu mode="profile"/>
+    <TestDashboard mode="profile"/>
   </React.StrictMode>
 );

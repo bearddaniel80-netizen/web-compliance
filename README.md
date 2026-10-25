@@ -1,13 +1,19 @@
 # web-compliance
 
 ## Description
-A secured api/frontend for the AQL platform. This runs a `subprocess` on the fastapi service. 
-There are 3 endpoints per 3 routes so in total 9 endpoints. 
-These endpoint can also be reached with `curl -ikL localhost` while services are running.
+A secured api/frontend for the AQL platform.
+Features
+- unit tests
+- profile tests
 
 ---
 
 ## Endpoints
+These endpoint can also be reached with 
+```bash
+curl -ikL localhost
+```
+while services are running.
 
 ### /api/manifest/list
 Displays all possible test files.
@@ -132,14 +138,18 @@ openssl rand -hex 32
 
 ## System Flow
 
-```text
-Frontend
-  ↓
-Caddy
-  ↓
-Node
-  ↓
-FastAPI
+```mermaid
+flowchart TB
+    %% Application Architecture
+    node_0["Browser"]
+    node_1["Frontend"]
+    node_0 --> node_1
+    node_2["Caddy"]
+    node_1 --> node_2
+    node_3["Node"]
+    node_2 --> node_3
+    node_4["FastAPI"]
+    node_3 --> node_4
 ```
 
 ## Reference

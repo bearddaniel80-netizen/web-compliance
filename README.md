@@ -21,8 +21,32 @@ Displays all possible test files.
 ### /api/manifest/{filename}
 Runs all tests in the test file.
 
+### /api/manifest/github/{filename}
+Runs all tests in the test file. Render as html from md file.
+
+### /api/manifest/html/{filename}
+Runs all tests in the test file. Render as html.
+
+### /api/manifest/markdown/{filename}
+Runs all tests in the test file. Render as html from md file.
+
+### /api/manifest/pdf/{filename}
+Runs all tests in the test file. Render as html from pdf file
+
+### /api/manifest/cache/{filename}
+Runs all tests in the test file. Cache test results.
+
+### /api/manifest/failfast/{filename}
+Runs all tests in the test file. Stop testing if ANY error.
+
+### /api/manifest/failfast/query/{filename}
+Runs all tests in the test file. Stop testing if query fails.
+
 ### /api/manifest/profile/{filename}
 Runs all tests in the test file. Order DESC by duration
+
+### /api/manifest/retry/{times}/{filename}
+Runs all tests in the test file. Retry failed tests.
 
 ### /api/suite/list
 Displays all possible suite files.
@@ -30,8 +54,32 @@ Displays all possible suite files.
 ### /api/suite/{filename}
 Runs all tests in the test files.
 
+### /api/suite/github/{filename}
+Runs all tests in the test file. Render as html from md file.
+
+### /api/suite/html/{filename}
+Runs all tests in the test file. Render as html.
+
+### /api/suite/markdown/{filename}
+Runs all tests in the test file. Render as html from md file.
+
+### /api/suite/pdf/{filename}
+Runs all tests in the test file. Render as html from pdf file
+
+### /api/suite/cache/{filename}
+Runs all tests in the test file. Cache test results.
+
+### /api/suite/failfast/{filename}
+Runs all tests in the test file. Stop testing if ANY error.
+
+### /api/suite/failfast/query/{filename}
+Runs all tests in the test file. Stop testing if query fails.
+
 ### /api/suite/profile/{filename}
 Runs all tests in the test file. Order DESC by duration
+
+### /api/suite/retry/{times}/{filename}
+Runs all tests in the test file. Retry failed tests.
 
 ### /api/tag/list
 Displays all possible test tags.
@@ -39,8 +87,32 @@ Displays all possible test tags.
 ### /api/tag/{tag}
 Runs all tests across test files with test tag.
 
+### /api/tag/github/{tag}
+Runs all tests across test files with test tag. Render as html from md file.
+
+### /api/tag/html/{tag}
+Runs all tests across test files with test tag. Render as html.
+
+### /api/tag/markdown/{tag}
+Runs all tests across test files with test tag. Render as html from md file.
+
+### /api/tag/pdf/{tag}
+Runs all tests across test files with test tag. Render as html from pdf file
+
+### /api/tag/cache/{tag}
+Runs all tests across test files with test tag. Cache test results.
+
+### /api/tag/failfast/{tag}
+Runs all tests across test files with test tag. Stop testing if ANY error.
+
+### /api/tag/failfast/query/{tag}
+Runs all tests across test files with test tag. Stop testing if query fails.
+
 ### /api/tag/profile/{tag}
 Runs all tests across test files with test tag. Order DESC by duration
+
+### /api/tag/retry/{times}/{tag}
+Runs all tests across test files with test tag. Retry failed tests.
 
 ---
 

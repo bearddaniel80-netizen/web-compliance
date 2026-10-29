@@ -72,6 +72,8 @@ WORKDIR /app
 
 RUN cp -R /downloads/compliance-public/data/* .
 
+RUN cp /downloads/compliance-public/README.md .
+
 # ----------- runtime ------
 
 FROM deps AS runtime
@@ -92,6 +94,16 @@ WORKDIR /app
 COPY --from=aql /app .
 
 COPY --from=compliance /app .
+
+# Linux tool md2html
+RUN --mount=type=cache,target=/var/cache/apt \
+    apt-get update && \
+    apt-get install -y pandoc
+
+# Linux tool pdf2html
+RUN --mount=type=cache,target=/var/cache/apt \
+    apt-get update && \
+    apt-get install -y pdftohtml
 
 COPY . .
 

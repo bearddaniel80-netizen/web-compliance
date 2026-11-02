@@ -114,6 +114,9 @@ Runs all tests across test files with test tag. Order DESC by duration
 ### /api/tag/retry/{times}/{tag}
 Runs all tests across test files with test tag. Retry failed tests.
 
+### /api/index
+Render README from Compliance CLI.
+
 ---
 
 ## To run

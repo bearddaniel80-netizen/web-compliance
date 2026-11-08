@@ -14,7 +14,7 @@ export const navigationConfig = {
         {
           id: "cache",
           label: "Cache",
-          href: "/feature/cache.html",
+          href: "/feature/cache",
         },
         {
           id: "failfast",

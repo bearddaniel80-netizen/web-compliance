@@ -10,7 +10,13 @@ async function myList(endpoint) {
   const response = await fetch(endpoint);
 
   if (!response.ok) {
-    throw new Error("Request failed");
+    throw new Error(`Request failed: ${response.status}`);
+  }
+
+  const contentType = response.headers.get("content-type") || "";
+
+  if (contentType.includes("application/json")) {
+    return response.json();
   }
 
   return response.text();

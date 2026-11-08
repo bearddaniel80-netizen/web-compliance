@@ -13,7 +13,7 @@ async function myList(endpoint) {
     throw new Error("Request failed");
   }
 
-  return response.json();
+  return response.text();
 }
 
 function GettingStarted() {

@@ -60,7 +60,7 @@ def api_router(FOLDER):
     ):
         verify_internal_key(x_internal_key)
         command = ["compliance", FOLDER, "run", filename, "--format", "pdf"]
-        await process.render_pdf(command)
+        html = await process.render_pdf(command)
         return HTMLResponse(content=html)
 
 # --------------

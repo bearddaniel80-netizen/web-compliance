@@ -249,6 +249,3 @@ flowchart TB
 
 ## Reference
 This is a web implementation of a [CLI tool](https://github.com/bearddaniel80-netizen/compliance-public.git).
-
-## Reference
-This is a web implementation of a [CLI tool](https://github.com/bearddaniel80-netizen/compliance-public.git).
